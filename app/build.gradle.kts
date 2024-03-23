@@ -71,4 +71,10 @@ dependencies {
 
     //BIOMETRIC
     implementation(libs.biometric)
+
+    //DOCUMENT SCANNER
+    implementation(libs.play.services.mlkit.document.scanner)
+
+    //COIL IMAGE LOADER
+    implementation(libs.coil.compose)
 }
