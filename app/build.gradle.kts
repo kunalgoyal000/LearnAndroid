@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.kunal.learnandroid"
-        minSdk = 21
+        minSdk = 25
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
