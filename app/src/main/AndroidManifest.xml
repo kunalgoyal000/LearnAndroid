@@ -26,6 +26,7 @@
 
         <activity android:name=".biometric.BiometricActivity"/>
         <activity android:name=".documentScanner.DocumentScannerActivity"/>
+        <activity android:name=".appShortcut.AppShortcutActivity"/>
     </application>
 
 </manifest>

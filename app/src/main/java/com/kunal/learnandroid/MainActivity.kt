@@ -6,7 +6,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -14,6 +13,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
@@ -50,6 +50,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Document Scanner")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    AppShortcutActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "App Shortcut")
                         }
                     }
                 }
