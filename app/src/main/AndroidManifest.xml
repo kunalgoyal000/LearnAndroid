@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".MainApplication"
@@ -46,6 +47,7 @@
         <activity android:name=".services.foreground.ForegroundServiceActivity" />
         <activity android:name=".permissions.PermissionsActivity" />
         <activity android:name=".daggerHilt.ui.DaggerHiltActivity" />
+        <activity android:name=".internet.InternetConnectivityActivity" />
         <service android:name=".services.foreground.RunningService" />
     </application>
 

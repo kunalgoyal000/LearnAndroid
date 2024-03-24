@@ -23,6 +23,7 @@ import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
+import com.kunal.learnandroid.internet.InternetConnectivityActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
 
@@ -126,6 +127,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Dagger-Hilt")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    InternetConnectivityActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Internet connectivity")
                         }
                     }
                 }
