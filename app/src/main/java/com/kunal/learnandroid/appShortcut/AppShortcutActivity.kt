@@ -22,14 +22,12 @@ import androidx.core.content.getSystemService
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
-import com.kunal.learnandroid.MainViewModel
 import com.kunal.learnandroid.R
-import com.kunal.learnandroid.ShortcutType
 import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
 
 class AppShortcutActivity : AppCompatActivity() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: AppShortcutViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         handleIntent(intent)

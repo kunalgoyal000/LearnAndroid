@@ -1,8 +1,5 @@
 package com.kunal.learnandroid
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
@@ -21,15 +18,4 @@ class MainViewModel:ViewModel() {
             _isReady.value = true
         }
     }
-
-    var shortcutType by mutableStateOf<ShortcutType?>(null)
-        private set
-
-    fun onShortcutClicked(type: ShortcutType){
-        shortcutType = type
-    }
-}
-
-enum class ShortcutType{
-    STATIC, DYNAMIC, PINNED
 }
