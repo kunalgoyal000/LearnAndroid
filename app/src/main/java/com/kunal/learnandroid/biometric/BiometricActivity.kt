@@ -19,7 +19,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import com.kunal.learnandroid.biometric.BiometricPromptManager.BiometricResult
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 
@@ -72,7 +71,6 @@ class BiometricActivity: AppCompatActivity() {
                         }
                         biometricResult?.let{ result ->
                             Text(
-                                color = Color.White,
                                 text = when (result){
                                     is BiometricResult.AuthenticationError -> result.error
                                     BiometricResult.AuthenticationFailed -> "Authentication Failed"

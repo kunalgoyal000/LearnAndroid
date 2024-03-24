@@ -10,7 +10,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 
 class InternetConnectivityActivity : AppCompatActivity() {
@@ -29,7 +28,7 @@ class InternetConnectivityActivity : AppCompatActivity() {
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(text = "Network Status: $status", color = Color.White)
+                    Text(text = "Network Status: $status")
                 }
             }
         }
