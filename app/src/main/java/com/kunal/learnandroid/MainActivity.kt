@@ -20,6 +20,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
+import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
 import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
 
@@ -103,6 +104,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Foreground Service")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    PermissionsActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Permissions")
                         }
                     }
                 }

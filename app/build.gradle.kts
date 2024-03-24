@@ -81,4 +81,7 @@ dependencies {
     //SPLASH SCREEN
     implementation(libs.androidx.core.splashscreen)
 
+    //LIFECYCLE VIEWMODEL COMPOSE
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
 }
