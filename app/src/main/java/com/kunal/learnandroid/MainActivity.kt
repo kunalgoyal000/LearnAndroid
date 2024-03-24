@@ -5,9 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.OvershootInterpolator
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,9 +20,10 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
+import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
 import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<MainViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -92,6 +93,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "App Shortcut")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    ForegroundServiceActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Foreground Service")
                         }
                     }
                 }

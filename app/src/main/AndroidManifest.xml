@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -29,6 +33,9 @@
         <activity android:name=".biometric.BiometricActivity"/>
         <activity android:name=".documentScanner.DocumentScannerActivity"/>
         <activity android:name=".appShortcut.AppShortcutActivity"/>
+        <activity android:name=".services.foreground.ForegroundServiceActivity" />
+
+        <service android:name=".services.foreground.RunningService" />
     </application>
 
 </manifest>

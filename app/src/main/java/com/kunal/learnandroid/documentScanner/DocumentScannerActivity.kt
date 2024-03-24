@@ -3,11 +3,11 @@ package com.kunal.learnandroid.documentScanner
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -33,7 +33,7 @@ import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
 import java.io.File
 import java.io.FileOutputStream
 
-class DocumentScannerActivity: ComponentActivity() {
+class DocumentScannerActivity : AppCompatActivity() {
 
     val options = GmsDocumentScannerOptions.Builder().apply {
         setScannerMode(SCANNER_MODE_FULL)
@@ -42,7 +42,7 @@ class DocumentScannerActivity: ComponentActivity() {
         setResultFormats(RESULT_FORMAT_JPEG, RESULT_FORMAT_PDF)
     }.build()
 
-    val scanner = GmsDocumentScanning.getClient(options)
+    private val scanner = GmsDocumentScanning.getClient(options)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

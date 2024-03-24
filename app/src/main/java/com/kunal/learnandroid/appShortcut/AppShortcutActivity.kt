@@ -7,9 +7,9 @@ import android.content.pm.ShortcutManager
 import android.graphics.drawable.Icon
 import android.os.Build
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -27,7 +27,7 @@ import com.kunal.learnandroid.R
 import com.kunal.learnandroid.ShortcutType
 import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
 
-class AppShortcutActivity: ComponentActivity() {
+class AppShortcutActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {

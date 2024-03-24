@@ -20,6 +20,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.kunal.learnandroid.biometric.BiometricPromptManager.BiometricResult
 import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
 
 class BiometricActivity: AppCompatActivity() {
@@ -42,7 +43,7 @@ class BiometricActivity: AppCompatActivity() {
                     )
 
                     LaunchedEffect(biometricResult) {
-                        if(biometricResult is BiometricPromptManager.BiometricResult.AuthenticationNotSet) {
+                        if (biometricResult is BiometricResult.AuthenticationNotSet) {
                             if(Build.VERSION.SDK_INT >=30){
                                 val enrollIntent = Intent(Settings.ACTION_BIOMETRIC_ENROLL).apply {
                                     putExtra(
@@ -73,26 +74,12 @@ class BiometricActivity: AppCompatActivity() {
                             Text(
                                 color = Color.White,
                                 text = when (result){
-                                    is BiometricPromptManager.BiometricResult.AuthenticationError -> {
-                                        result.error
-                                    }
-
-                                    BiometricPromptManager.BiometricResult.AuthenticationFailed -> {
-                                        "Authentication Failed"
-                                    }
-
-                                    BiometricPromptManager.BiometricResult.AuthenticationNotSet -> {
-                                        "Authentication Not Set"
-                                    }
-                                    BiometricPromptManager.BiometricResult.AuthenticationSuccess -> {
-                                        "Authentication Success"
-                                    }
-                                    BiometricPromptManager.BiometricResult.FeatureUnavailable -> {
-                                        "Feature unavailable"
-                                    }
-                                    BiometricPromptManager.BiometricResult.HardwareUnavailable -> {
-                                        "Hardware unavailable"
-                                    }
+                                    is BiometricResult.AuthenticationError -> result.error
+                                    BiometricResult.AuthenticationFailed -> "Authentication Failed"
+                                    BiometricResult.AuthenticationNotSet -> "Authentication Not Set"
+                                    BiometricResult.AuthenticationSuccess -> "Authentication Success"
+                                    BiometricResult.FeatureUnavailable -> "Feature unavailable"
+                                    BiometricResult.HardwareUnavailable -> "Hardware unavailable"
                                 }
                             )
                         }
