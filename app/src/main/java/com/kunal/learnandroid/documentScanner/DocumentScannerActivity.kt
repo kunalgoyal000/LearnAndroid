@@ -14,8 +14,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -50,10 +48,6 @@ class DocumentScannerActivity: ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LearnAndroidTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
                     var imageUris by remember {
                         mutableStateOf<List<Uri>>(emptyList())
                     }
@@ -111,4 +105,3 @@ class DocumentScannerActivity: ComponentActivity() {
             }
         }
     }
-}

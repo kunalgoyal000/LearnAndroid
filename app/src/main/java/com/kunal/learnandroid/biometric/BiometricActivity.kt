@@ -13,14 +13,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
 
 class BiometricActivity: AppCompatActivity() {
@@ -32,11 +31,6 @@ class BiometricActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LearnAndroidTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
                     val biometricResult by promptManager.promptResults.collectAsState(
                         initial = null )
 
@@ -77,6 +71,7 @@ class BiometricActivity: AppCompatActivity() {
                         }
                         biometricResult?.let{ result ->
                             Text(
+                                color = Color.White,
                                 text = when (result){
                                     is BiometricPromptManager.BiometricResult.AuthenticationError -> {
                                         result.error
@@ -104,6 +99,5 @@ class BiometricActivity: AppCompatActivity() {
                     }
                 }
             }
-        }
     }
 }
