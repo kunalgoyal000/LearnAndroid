@@ -2,6 +2,7 @@
 agp = "8.3.1"
 appcompat = "1.6.1"
 coil = "2.6.0"
+core-splashscreen = "1.0.1"
 kotlin = "1.9.0"
 core-ktx = "1.12.0"
 junit = "4.13.2"
@@ -15,6 +16,7 @@ play-services-mlkit-document-scanner = "16.0.0-beta1"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

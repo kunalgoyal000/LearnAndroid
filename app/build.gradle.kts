@@ -77,4 +77,8 @@ dependencies {
 
     //COIL IMAGE LOADER
     implementation(libs.coil.compose)
+
+    //SPLASH SCREEN
+    implementation(libs.androidx.core.splashscreen)
+
 }
