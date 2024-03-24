@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
-import com.kunal.learnandroid.daggerHilt.ui.components.Loader
+import com.kunal.learnandroid.daggerHilt.ui.screens.CatGalleryScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -14,7 +14,7 @@ class DaggerHiltActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LearnAndroidTheme {
-                Loader()
+                CatGalleryScreen()
             }
         }
     }

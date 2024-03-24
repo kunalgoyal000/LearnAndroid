@@ -25,10 +25,20 @@ class DaggerViewModel @Inject constructor(
         getCats(AppConstants.LIMIT)
     }
 
-    fun getCats(limit: Int) {
+    private fun getCats(limit: Int) {
         viewModelScope.launch {
-            val response = catRepository.getCats(limit)
+            _cats.value = ResourceState.Loading()
+            try {
+                val response = catRepository.getCats(limit)
 
+                if (response.isSuccessful && response.body() != null) {
+                    _cats.value = ResourceState.Success(response.body()!!)
+                } else {
+                    _cats.value = ResourceState.Error("Error fetching data")
+                }
+            } catch (e: Exception) {
+                _cats.value = ResourceState.Error(e.localizedMessage ?: "Some error occured")
+            }
         }
     }
 

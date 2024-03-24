@@ -16,8 +16,9 @@ compose-bom = "2024.03.00"
 biometric = "1.2.0-alpha05"
 play-services-mlkit-document-scanner = "16.0.0-beta1"
 lifecycle_version = "2.7.0"
-retrofit = "2.9.0"
+retrofit = "2.10.0"
 okhttp = "4.12.0"
+hiltNavigationCompose = "1.2.0"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -39,6 +40,7 @@ ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 biometric = {group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle_version" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
