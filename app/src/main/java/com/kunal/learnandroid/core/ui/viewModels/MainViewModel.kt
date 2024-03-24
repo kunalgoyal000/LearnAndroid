@@ -1,4 +1,4 @@
-package com.kunal.learnandroid
+package com.kunal.learnandroid.core.ui.viewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

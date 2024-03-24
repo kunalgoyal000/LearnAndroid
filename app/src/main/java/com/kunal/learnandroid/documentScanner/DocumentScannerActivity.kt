@@ -29,7 +29,7 @@ import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions.RESULT_
 import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions.SCANNER_MODE_FULL
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanning
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult
-import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import java.io.File
 import java.io.FileOutputStream
 

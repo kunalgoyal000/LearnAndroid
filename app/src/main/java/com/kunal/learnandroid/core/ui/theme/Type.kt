@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.ui.theme
+package com.kunal.learnandroid.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

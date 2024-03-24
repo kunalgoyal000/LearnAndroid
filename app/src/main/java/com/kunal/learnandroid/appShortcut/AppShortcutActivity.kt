@@ -23,7 +23,7 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import com.kunal.learnandroid.R
-import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 
 class AppShortcutActivity : AppCompatActivity() {
 

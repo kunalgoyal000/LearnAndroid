@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.permissions
+package com.kunal.learnandroid.permissions.viewModels
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel

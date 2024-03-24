@@ -1,4 +1,4 @@
-package com.kunal.learnandroid
+package com.kunal.learnandroid.core.ui
 
 import android.animation.ObjectAnimator
 import android.content.Intent
@@ -19,10 +19,12 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
+import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
-import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
 
 class MainActivity : AppCompatActivity() {
 
@@ -114,6 +116,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Permissions")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    DaggerHiltActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Dagger-Hilt")
                         }
                     }
                 }

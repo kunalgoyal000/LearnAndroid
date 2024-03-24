@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.permissions
+package com.kunal.learnandroid.permissions.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.AlertDialog

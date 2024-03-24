@@ -21,7 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.kunal.learnandroid.biometric.BiometricPromptManager.BiometricResult
-import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 
 class BiometricActivity: AppCompatActivity() {
 

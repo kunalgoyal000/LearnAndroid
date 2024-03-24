@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.ui.theme
+package com.kunal.learnandroid.core.ui.theme
 
 import android.app.Activity
 import android.os.Build

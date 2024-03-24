@@ -2,6 +2,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -41,7 +43,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.9"
     }
     packaging {
         resources {
@@ -84,4 +86,14 @@ dependencies {
     //LIFECYCLE VIEWMODEL COMPOSE
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
+    //DAGGER-HILT
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    //NETWORKING LIBRARY
+    implementation(libs.retrofit)
+    implementation(libs.gson)
+    implementation(platform(libs.okhttp.bom))
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
 }

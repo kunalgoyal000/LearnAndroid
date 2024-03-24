@@ -23,7 +23,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.kunal.learnandroid.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.permissions.components.CameraPermissionTextProvider
+import com.kunal.learnandroid.permissions.components.PermissionDialog
+import com.kunal.learnandroid.permissions.components.PhoneCallPermissionTextProvider
+import com.kunal.learnandroid.permissions.components.RecordAudioPermissionTextProvider
+import com.kunal.learnandroid.permissions.viewModels.PermissionViewModel
 
 class PermissionsActivity : AppCompatActivity() {
 
