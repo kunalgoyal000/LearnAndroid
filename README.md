@@ -2,7 +2,7 @@
 
 ## Technologies Integrated:
 
-##App is written in Kotlin with Jetpack compose for UI
+### App is written in Kotlin with Jetpack compose for UI
 
 * Jetpack Compose (Column, Button, Text)
 * Retrofit for Network Calls
