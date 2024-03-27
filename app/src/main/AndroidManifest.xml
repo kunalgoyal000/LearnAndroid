@@ -28,6 +28,9 @@
         android:theme="@style/Theme.LearnAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".text.autoResizedText.ui.AutoResizedTextActivity"
+            android:exported="false" />
+        <activity
             android:name=".core.ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
@@ -68,12 +71,12 @@
         <activity
             android:name=".notifications.ui.NotificationActivity"
             android:exported="false" />
-
         <activity
-            android:name=".animatedText.ui.AnimatedCounterTextActivity"
+            android:name=".text.animatedText.ui.AnimatedCounterTextActivity"
             android:exported="false" />
 
         <receiver android:name=".notifications.CounterNotificationReceiver" />
+
         <service android:name=".services.foreground.RunningService" />
     </application>
 

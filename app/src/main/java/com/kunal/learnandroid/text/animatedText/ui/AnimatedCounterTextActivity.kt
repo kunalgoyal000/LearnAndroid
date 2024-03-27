@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.animatedText.ui
+package com.kunal.learnandroid.text.animatedText.ui
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -15,8 +15,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.kunal.learnandroid.animatedText.ui.components.AnimatedCounter
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.text.animatedText.ui.components.AnimatedCounter
 
 class AnimatedCounterTextActivity : AppCompatActivity() {
 

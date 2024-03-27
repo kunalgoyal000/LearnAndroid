@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.animatedText.ui.components
+package com.kunal.learnandroid.text.animatedText.ui.components
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi

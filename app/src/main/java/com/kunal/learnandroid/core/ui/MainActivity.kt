@@ -18,7 +18,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.kunal.learnandroid.animatedText.ui.AnimatedCounterTextActivity
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
@@ -30,6 +29,8 @@ import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.pullToRefresh.ui.PullToRefreshActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
+import com.kunal.learnandroid.text.animatedText.ui.AnimatedCounterTextActivity
+import com.kunal.learnandroid.text.autoResizedText.ui.AutoResizedTextActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -173,6 +174,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Animated Counter Text")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    AutoResizedTextActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Auto Resized Text")
                         }
                     }
                 }
