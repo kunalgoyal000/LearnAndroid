@@ -41,18 +41,36 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-        <activity android:name=".biometric.BiometricActivity" />
-        <activity android:name=".documentScanner.DocumentScannerActivity" />
-        <activity android:name=".appShortcut.AppShortcutActivity" />
-        <activity android:name=".services.foreground.ForegroundServiceActivity" />
-        <activity android:name=".permissions.PermissionsActivity" />
-        <activity android:name=".daggerHilt.ui.DaggerHiltActivity" />
-        <activity android:name=".internet.InternetConnectivityActivity" />
+        <activity
+            android:name=".biometric.BiometricActivity"
+            android:exported="false" />
+        <activity
+            android:name=".documentScanner.DocumentScannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appShortcut.AppShortcutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".services.foreground.ForegroundServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".permissions.PermissionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".daggerHilt.ui.DaggerHiltActivity"
+            android:exported="false" />
+        <activity
+            android:name=".internet.InternetConnectivityActivity"
+            android:exported="false" />
         <activity
             android:name=".pullToRefresh.ui.PullToRefreshActivity"
             android:exported="false" />
         <activity
             android:name=".notifications.ui.NotificationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".animatedText.ui.AnimatedCounterTextActivity"
             android:exported="false" />
 
         <receiver android:name=".notifications.CounterNotificationReceiver" />

@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.kunal.learnandroid.animatedText.ui.AnimatedCounterTextActivity
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
@@ -162,6 +163,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Notifications")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    AnimatedCounterTextActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Animated Counter Text")
                         }
                     }
                 }
