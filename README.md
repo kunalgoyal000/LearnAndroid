@@ -4,7 +4,7 @@
 
 ### App is written in Kotlin with Jetpack compose for UI
 
-* Jetpack Compose (Column, Button, Text)
+* Jetpack Compose (Column, Row, Button, Text, Box, Surface)
 * Retrofit for Network Calls
 * Coil for Image Loading
 * Dagger Hilt for Dependency Injection
