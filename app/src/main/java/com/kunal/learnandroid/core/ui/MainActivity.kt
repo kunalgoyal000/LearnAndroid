@@ -26,6 +26,7 @@ import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.internet.InternetConnectivityActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
+import com.kunal.learnandroid.pullToRefresh.ui.PullToRefreshActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
 
 class MainActivity : AppCompatActivity() {
@@ -127,7 +128,7 @@ class MainActivity : AppCompatActivity() {
                                 )
                             )
                         }) {
-                            Text(text = "Dagger-Hilt")
+                            Text(text = "Dagger-Hilt, Retrofit, Coil")
                         }
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                             Button(onClick = {
@@ -140,6 +141,16 @@ class MainActivity : AppCompatActivity() {
                             }) {
                                 Text(text = "Internet connectivity")
                             }
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    PullToRefreshActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Pull to Refresh")
                         }
                     }
                 }
