@@ -51,6 +51,11 @@
         <activity
             android:name=".pullToRefresh.ui.PullToRefreshActivity"
             android:exported="false" />
+        <activity
+            android:name=".notifications.ui.NotificationActivity"
+            android:exported="false" />
+
+        <receiver android:name=".notifications.CounterNotificationReceiver" />
         <service android:name=".services.foreground.RunningService" />
     </application>
 

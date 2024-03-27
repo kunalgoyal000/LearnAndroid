@@ -25,6 +25,7 @@ import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.internet.InternetConnectivityActivity
+import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.pullToRefresh.ui.PullToRefreshActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
@@ -151,6 +152,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Pull to Refresh")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    NotificationActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Notifications")
                         }
                     }
                 }
