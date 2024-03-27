@@ -28,6 +28,9 @@
         android:theme="@style/Theme.LearnAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".shimmer.ui.ShimmerActivity"
+            android:exported="false" />
+        <activity
             android:name=".text.autoResizedText.ui.AutoResizedTextActivity"
             android:exported="false" />
         <activity

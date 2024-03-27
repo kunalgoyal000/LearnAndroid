@@ -29,6 +29,7 @@ import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.pullToRefresh.ui.PullToRefreshActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
+import com.kunal.learnandroid.shimmer.ui.ShimmerActivity
 import com.kunal.learnandroid.text.animatedText.ui.AnimatedCounterTextActivity
 import com.kunal.learnandroid.text.autoResizedText.ui.AutoResizedTextActivity
 
@@ -184,6 +185,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Auto Resized Text")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    ShimmerActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Shimmer Effect")
                         }
                     }
                 }
