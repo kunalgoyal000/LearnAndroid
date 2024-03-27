@@ -3,6 +3,7 @@ package com.kunal.learnandroid.shimmer.ui
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,6 +22,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.shimmer.ui.components.ShimmerListItem
@@ -54,7 +56,9 @@ class ShimmerActivity : AppCompatActivity() {
                                     Icon(
                                         imageVector = Icons.Default.Home,
                                         contentDescription = null,
-                                        modifier = Modifier.size(100.dp)
+                                        modifier = Modifier
+                                            .size(100.dp)
+                                            .background(Color.White)
                                     )
                                     Spacer(modifier = Modifier.width(16.dp))
                                     Text(text = "This is a text to show after our shimmer")
