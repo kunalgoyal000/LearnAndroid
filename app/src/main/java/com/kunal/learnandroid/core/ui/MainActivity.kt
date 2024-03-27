@@ -2,6 +2,7 @@ package com.kunal.learnandroid.core.ui
 
 import android.animation.ObjectAnimator
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.animation.OvershootInterpolator
@@ -128,15 +129,17 @@ class MainActivity : AppCompatActivity() {
                         }) {
                             Text(text = "Dagger-Hilt")
                         }
-                        Button(onClick = {
-                            startActivity(
-                                Intent(
-                                    this@MainActivity,
-                                    InternetConnectivityActivity::class.java
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                            Button(onClick = {
+                                startActivity(
+                                    Intent(
+                                        this@MainActivity,
+                                        InternetConnectivityActivity::class.java
+                                    )
                                 )
-                            )
-                        }) {
-                            Text(text = "Internet connectivity")
+                            }) {
+                                Text(text = "Internet connectivity")
+                            }
                         }
                     }
                 }
