@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.pullToRefresh.ui
+package com.kunal.learnandroid.lazyColumn.pullToRefresh.ui
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -17,7 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
-import com.kunal.learnandroid.pullToRefresh.ui.components.PullToRefreshLazyColumn
+import com.kunal.learnandroid.lazyColumn.pullToRefresh.ui.components.PullToRefreshLazyColumn
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

@@ -28,12 +28,6 @@
         android:theme="@style/Theme.LearnAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".shimmer.ui.ShimmerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".text.autoResizedText.ui.AutoResizedTextActivity"
-            android:exported="false" />
-        <activity
             android:name=".core.ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
@@ -69,7 +63,7 @@
             android:name=".internet.InternetConnectivityActivity"
             android:exported="false" />
         <activity
-            android:name=".pullToRefresh.ui.PullToRefreshActivity"
+            android:name=".lazyColumn.pullToRefresh.ui.PullToRefreshActivity"
             android:exported="false" />
         <activity
             android:name=".notifications.ui.NotificationActivity"
@@ -77,7 +71,15 @@
         <activity
             android:name=".text.animatedText.ui.AnimatedCounterTextActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".lazyColumn.nestedScrolling.ui.NestedScrollingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shimmer.ui.ShimmerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".text.autoResizedText.ui.AutoResizedTextActivity"
+            android:exported="false" />
         <receiver android:name=".notifications.CounterNotificationReceiver" />
 
         <service android:name=".services.foreground.RunningService" />

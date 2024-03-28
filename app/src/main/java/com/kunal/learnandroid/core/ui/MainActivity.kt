@@ -25,9 +25,10 @@ import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.internet.InternetConnectivityActivity
+import com.kunal.learnandroid.lazyColumn.nestedScrolling.ui.NestedScrollingActivity
+import com.kunal.learnandroid.lazyColumn.pullToRefresh.ui.PullToRefreshActivity
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
-import com.kunal.learnandroid.pullToRefresh.ui.PullToRefreshActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
 import com.kunal.learnandroid.shimmer.ui.ShimmerActivity
 import com.kunal.learnandroid.text.animatedText.ui.AnimatedCounterTextActivity
@@ -195,6 +196,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Shimmer Effect")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    NestedScrollingActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Nested Scrolling")
                         }
                     }
                 }
