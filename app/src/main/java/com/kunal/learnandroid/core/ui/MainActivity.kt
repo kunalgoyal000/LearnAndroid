@@ -20,6 +20,7 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
+import com.kunal.learnandroid.camera.ui.CameraActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
@@ -79,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                         modifier = Modifier
                             .fillMaxSize(),
                         verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally
+                        horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Button(onClick = {
                             startActivity(Intent(this@MainActivity, BiometricActivity::class.java))
@@ -208,7 +209,6 @@ class MainActivity : AppCompatActivity() {
                         }) {
                             Text(text = "Nested Scrolling")
                         }
-
                         Button(onClick = {
                             startActivity(
                                 Intent(
@@ -218,6 +218,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Lazy Vertical Grid")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    CameraActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "CameraX")
                         }
                     }
                 }

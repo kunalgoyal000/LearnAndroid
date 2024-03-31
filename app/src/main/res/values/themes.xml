@@ -10,4 +10,7 @@
         <item name="postSplashScreenTheme">@style/Theme.LearnAndroid</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/animated_logo</item>
     </style>
+
+    <style name="CameraTheme" parent="android:Theme.Material.Light.NoActionBar" />
+
 </resources>
