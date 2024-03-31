@@ -25,6 +25,7 @@ import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.internet.InternetConnectivityActivity
+import com.kunal.learnandroid.lazyColumn.lazyGrid.ui.LazyGridActivity
 import com.kunal.learnandroid.lazyColumn.nestedScrolling.ui.NestedScrollingActivity
 import com.kunal.learnandroid.lazyColumn.pullToRefresh.ui.PullToRefreshActivity
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
@@ -206,6 +207,17 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Nested Scrolling")
+                        }
+
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    LazyGridActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Lazy Vertical Grid")
                         }
                     }
                 }
