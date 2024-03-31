@@ -3,19 +3,25 @@
 package com.kunal.learnandroid.camera.ui
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Matrix
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture.OnImageCapturedCallback
 import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.ImageProxy
+import androidx.camera.video.FileOutputOptions
+import androidx.camera.video.Recording
+import androidx.camera.video.VideoRecordEvent
 import androidx.camera.view.CameraController
 import androidx.camera.view.LifecycleCameraController
+import androidx.camera.view.video.AudioConfig
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -27,6 +33,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Cameraswitch
 import androidx.compose.material.icons.filled.Photo
 import androidx.compose.material.icons.filled.PhotoCamera
+import androidx.compose.material.icons.filled.Videocam
 import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -47,8 +54,12 @@ import com.kunal.learnandroid.camera.ui.components.PhotoBottomSheetContent
 import com.kunal.learnandroid.camera.ui.viewmodels.CameraViewModel
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import kotlinx.coroutines.launch
+import java.io.File
 
 class CameraActivity : ComponentActivity() {
+
+    private var recording: Recording? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (!hasRequiredPermissions()) {
@@ -136,6 +147,14 @@ class CameraActivity : ComponentActivity() {
                                     contentDescription = "Take Photo"
                                 )
                             }
+                            IconButton(onClick = {
+                                recordVideo(controller)
+                            }) {
+                                Icon(
+                                    imageVector = Icons.Default.Videocam,
+                                    contentDescription = "Record Video"
+                                )
+                            }
                         }
                     }
                 }
@@ -147,6 +166,10 @@ class CameraActivity : ComponentActivity() {
         controller: LifecycleCameraController,
         onPhotoTaken: (Bitmap) -> Unit
     ) {
+        if (!hasRequiredPermissions()) {
+            return
+        }
+
         controller.takePicture(
             ContextCompat.getMainExecutor(applicationContext),
             object : OnImageCapturedCallback() {
@@ -177,6 +200,48 @@ class CameraActivity : ComponentActivity() {
             }
         )
 
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun recordVideo(controller: LifecycleCameraController) {
+        if (recording != null) {
+            recording?.stop()
+            recording = null
+            return
+        }
+
+        if (!hasRequiredPermissions()) {
+            return
+        }
+
+        val outputFile = File(filesDir, "my-recording.mp4")
+        recording = controller.startRecording(
+            FileOutputOptions.Builder(outputFile).build(),
+            AudioConfig.create(true),
+            ContextCompat.getMainExecutor(applicationContext)
+        ) { event ->
+            when (event) {
+                is VideoRecordEvent.Finalize -> {
+                    if (event.hasError()) {
+                        recording?.stop()
+                        recording = null
+
+                        Toast.makeText(
+                            applicationContext,
+                            "Video capture failed",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    } else {
+                        Toast.makeText(
+                            applicationContext,
+                            "Video capture succeeded",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+
+            }
+        }
     }
 
     private fun hasRequiredPermissions(): Boolean {
