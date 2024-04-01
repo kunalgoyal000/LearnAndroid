@@ -28,6 +28,10 @@
         android:theme="@style/Theme.LearnAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity"
+            android:exported="false"
+            android:theme="@style/CameraTheme" />
+        <activity
             android:name=".camera.ui.CameraActivity"
             android:exported="false"
             android:theme="@style/CameraTheme" />

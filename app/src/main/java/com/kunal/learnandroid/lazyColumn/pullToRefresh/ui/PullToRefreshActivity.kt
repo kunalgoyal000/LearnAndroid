@@ -1,8 +1,8 @@
 package com.kunal.learnandroid.lazyColumn.pullToRefresh.ui
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -21,7 +21,7 @@ import com.kunal.learnandroid.lazyColumn.pullToRefresh.ui.components.PullToRefre
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class PullToRefreshActivity : AppCompatActivity() {
+class PullToRefreshActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

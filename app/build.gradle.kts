@@ -103,4 +103,7 @@ dependencies {
     //CAMERAX
     implementation(libs.bundles.cameraXDependencies)
     implementation(libs.androidx.material.icons.extended)
+
+    //TENSOR FLOW LITE
+    implementation(libs.bundles.tensorFlowLiteDependencies)
 }

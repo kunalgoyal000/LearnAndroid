@@ -26,6 +26,7 @@ import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.internet.InternetConnectivityActivity
+import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
 import com.kunal.learnandroid.lazyColumn.lazyGrid.ui.LazyGridActivity
 import com.kunal.learnandroid.lazyColumn.nestedScrolling.ui.NestedScrollingActivity
 import com.kunal.learnandroid.lazyColumn.pullToRefresh.ui.PullToRefreshActivity
@@ -228,6 +229,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "CameraX")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    LandmarkRecognitionTensorFlowActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Landmark Recognition Tensor Flow")
                         }
                     }
                 }

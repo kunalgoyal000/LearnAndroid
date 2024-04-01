@@ -1,8 +1,8 @@
 package com.kunal.learnandroid.shimmer.ui
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -28,7 +28,7 @@ import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.shimmer.ui.components.ShimmerListItem
 import kotlinx.coroutines.delay
 
-class ShimmerActivity : AppCompatActivity() {
+class ShimmerActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
