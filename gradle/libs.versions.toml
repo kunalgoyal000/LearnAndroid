@@ -17,6 +17,7 @@ biometric = "1.2.0-alpha05"
 materialIconsExtended = "1.7.0-alpha05"
 play-services-mlkit-document-scanner = "16.0.0-beta1"
 lifecycle_version = "2.7.0"
+playServicesAuth = "21.0.0"
 playServicesLocation = "21.2.0"
 retrofit = "2.11.0"
 okhttp = "4.12.0"
@@ -27,6 +28,8 @@ cameraX = "1.4.0-alpha04"
 tensorflowLiteGpu = "2.9.0"
 tensorflowLiteGpuDelegatePlugin = "0.4.4"
 tensorflowLiteTaskVision = "0.4.4"
+firebase-bom = "32.8.0"
+googleServices = "4.4.1"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -40,6 +43,7 @@ espresso-core = { group = "androidx.test.espresso", name = "espresso-core", vers
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 play-services-mlkit-document-scanner = { module = "com.google.android.gms:play-services-mlkit-document-scanner", version.ref = "play-services-mlkit-document-scanner" }
 ui = { group = "androidx.compose.ui", name = "ui" }
@@ -70,6 +74,9 @@ androidx-camera-extensions = { group = "androidx.camera", name = "camera-extensi
 tensorflow-lite-gpu = { module = "org.tensorflow:tensorflow-lite-gpu", version.ref = "tensorflowLiteGpu" }
 tensorflow-lite-gpu-delegate-plugin = { module = "org.tensorflow:tensorflow-lite-gpu-delegate-plugin", version.ref = "tensorflowLiteGpuDelegatePlugin" }
 tensorflow-lite-task-vision = { module = "org.tensorflow:tensorflow-lite-task-vision", version.ref = "tensorflowLiteTaskVision" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+google-services = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }
 
 [bundles]
 cameraXDependencies = ["androidx-camera-camera2", "androidx-camera-lifecycle", "androidx-camera-video", "androidx-camera-view", "androidx-camera-mlkit-vision", "androidx-camera-extensions"]

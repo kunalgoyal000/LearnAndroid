@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.lazyColumn.nestedScrolling.ui.components
+package com.kunal.learnandroid.recyclerView.nestedScrolling.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

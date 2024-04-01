@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "60474246691",
+    "project_id": "learn-android-c323a",
+    "storage_bucket": "learn-android-c323a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60474246691:android:37c37a8acd831fd4b61396",
+        "android_client_info": {
+          "package_name": "com.kunal.learnandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60474246691-0t13cpm5hfpd71ika5nmaaa2p6f45lgg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kunal.learnandroid",
+            "certificate_hash": "217b60d26255e5e6e5d4c7cadbddc73059bef49e"
+          }
+        },
+        {
+          "client_id": "60474246691-f71ckk2alti99g70ktkfqg9ff2lqne85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp1VToWgJFhJRbxIiXlpfnb35i_ND6tbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60474246691-f71ckk2alti99g70ktkfqg9ff2lqne85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.lazyColumn.lazyGrid.ui
+package com.kunal.learnandroid.recyclerView.lazyGrid.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

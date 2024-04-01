@@ -25,8 +25,8 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kunal.learnandroid.alarmManager.AlarmManagerActivity
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.audioRecording.AudioRecordingActivity
+import com.kunal.learnandroid.authentication.AuthenticationActivity
 import com.kunal.learnandroid.backgroundLocationTracking.BackgroundLocationTrackingActivity
-import com.kunal.learnandroid.biometric.BiometricActivity
 import com.kunal.learnandroid.camera.ui.CameraActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
@@ -34,15 +34,11 @@ import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.internet.InternetConnectivityActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
-import com.kunal.learnandroid.lazyColumn.lazyGrid.ui.LazyGridActivity
-import com.kunal.learnandroid.lazyColumn.nestedScrolling.ui.NestedScrollingActivity
-import com.kunal.learnandroid.lazyColumn.pullToRefresh.ui.PullToRefreshActivity
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
+import com.kunal.learnandroid.recyclerView.RecyclerViewActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
-import com.kunal.learnandroid.shimmer.ui.ShimmerActivity
-import com.kunal.learnandroid.text.animatedText.ui.AnimatedCounterTextActivity
-import com.kunal.learnandroid.text.autoResizedText.ui.AutoResizedTextActivity
+import com.kunal.learnandroid.text.TextActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -81,7 +77,6 @@ class MainActivity : AppCompatActivity() {
                 zoomY.start()
             }
         }
-
         setContent {
             LearnAndroidTheme {
                     Column(
@@ -93,9 +88,34 @@ class MainActivity : AppCompatActivity() {
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
                         Button(onClick = {
-                            startActivity(Intent(this@MainActivity, BiometricActivity::class.java))
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    AuthenticationActivity::class.java
+                                )
+                            )
                         }) {
-                            Text(text = "Biometric")
+                            Text(text = "Authentication")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    RecyclerViewActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Recycler View")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    TextActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Text")
                         }
                         Button(onClick = {
                             startActivity(
@@ -163,71 +183,11 @@ class MainActivity : AppCompatActivity() {
                             startActivity(
                                 Intent(
                                     this@MainActivity,
-                                    PullToRefreshActivity::class.java
-                                )
-                            )
-                        }) {
-                            Text(text = "Pull to Refresh")
-                        }
-                        Button(onClick = {
-                            startActivity(
-                                Intent(
-                                    this@MainActivity,
                                     NotificationActivity::class.java
                                 )
                             )
                         }) {
                             Text(text = "Notifications")
-                        }
-                        Button(onClick = {
-                            startActivity(
-                                Intent(
-                                    this@MainActivity,
-                                    AnimatedCounterTextActivity::class.java
-                                )
-                            )
-                        }) {
-                            Text(text = "Animated Counter Text")
-                        }
-                        Button(onClick = {
-                            startActivity(
-                                Intent(
-                                    this@MainActivity,
-                                    AutoResizedTextActivity::class.java
-                                )
-                            )
-                        }) {
-                            Text(text = "Auto Resized Text")
-                        }
-                        Button(onClick = {
-                            startActivity(
-                                Intent(
-                                    this@MainActivity,
-                                    ShimmerActivity::class.java
-                                )
-                            )
-                        }) {
-                            Text(text = "Shimmer Effect")
-                        }
-                        Button(onClick = {
-                            startActivity(
-                                Intent(
-                                    this@MainActivity,
-                                    NestedScrollingActivity::class.java
-                                )
-                            )
-                        }) {
-                            Text(text = "Nested Scrolling")
-                        }
-                        Button(onClick = {
-                            startActivity(
-                                Intent(
-                                    this@MainActivity,
-                                    LazyGridActivity::class.java
-                                )
-                            )
-                        }) {
-                            Text(text = "Lazy Vertical Grid")
                         }
                         Button(onClick = {
                             startActivity(
@@ -279,7 +239,7 @@ class MainActivity : AppCompatActivity() {
                                 )
                             )
                         }) {
-                            Text(text = "Audio Record")
+                            Text(text = "Audio Recording")
                         }
                     }
                 }

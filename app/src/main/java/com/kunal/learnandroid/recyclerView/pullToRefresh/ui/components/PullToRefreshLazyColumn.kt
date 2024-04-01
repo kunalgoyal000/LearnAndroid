@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.lazyColumn.pullToRefresh.ui.components
+package com.kunal.learnandroid.recyclerView.pullToRefresh.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

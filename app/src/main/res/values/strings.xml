@@ -3,4 +3,9 @@
     <string name="short_label">Start timer</string>
     <string name="long_label">This shortcut starts the timer.</string>
     <string name="disabled_message">Setting the timer currently is not possible</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_google_sign_in">GoogleSignInActivity</string>
+    <string name="title_activity_recycler_view">RecyclerViewActivity</string>
+    <string name="title_activity_text">TextActivity</string>
+    <string name="web_client_id">60474246691-f71ckk2alti99g70ktkfqg9ff2lqne85.apps.googleusercontent.com</string>
 </resources>
