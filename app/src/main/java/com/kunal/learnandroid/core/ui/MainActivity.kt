@@ -24,6 +24,7 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kunal.learnandroid.alarmManager.AlarmManagerActivity
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
+import com.kunal.learnandroid.audioRecording.AudioRecordingActivity
 import com.kunal.learnandroid.backgroundLocationTracking.BackgroundLocationTrackingActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
 import com.kunal.learnandroid.camera.ui.CameraActivity
@@ -269,6 +270,16 @@ class MainActivity : AppCompatActivity() {
                             }) {
                                 Text(text = "Alarm Manager")
                             }
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    AudioRecordingActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Audio Record")
                         }
                     }
                 }
