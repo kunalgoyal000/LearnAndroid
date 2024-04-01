@@ -106,4 +106,7 @@ dependencies {
 
     //TENSOR FLOW LITE
     implementation(libs.bundles.tensorFlowLiteDependencies)
+
+    //LOCATION
+    implementation(libs.play.services.location)
 }

@@ -12,13 +12,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
+import com.kunal.learnandroid.backgroundLocationTracking.BackgroundLocationTrackingActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
 import com.kunal.learnandroid.camera.ui.CameraActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
@@ -79,7 +84,9 @@ class MainActivity : AppCompatActivity() {
             LearnAndroidTheme {
                     Column(
                         modifier = Modifier
-                            .fillMaxSize(),
+                            .fillMaxSize()
+                            .verticalScroll(rememberScrollState())
+                            .padding(top = 50.dp, bottom = 50.dp),
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
@@ -239,6 +246,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Landmark Recognition Tensor Flow")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    BackgroundLocationTrackingActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Background Location tracking")
                         }
                     }
                 }

@@ -40,6 +40,14 @@ class MainApplication : Application() {
             )
             counterChannel.description = "Used for the increment counter notifications"
             notificationManager.createNotificationChannel(counterChannel)
+
+            val locationServiceChannel = NotificationChannel(
+                "location_channel",
+                "Location Notifications",
+                NotificationManager.IMPORTANCE_LOW
+            )
+
+            notificationManager.createNotificationChannel(locationServiceChannel)
         }
     }
 }

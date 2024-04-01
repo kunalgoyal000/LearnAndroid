@@ -17,6 +17,7 @@ biometric = "1.2.0-alpha05"
 materialIconsExtended = "1.7.0-alpha05"
 play-services-mlkit-document-scanner = "16.0.0-beta1"
 lifecycle_version = "2.7.0"
+playServicesLocation = "21.2.0"
 retrofit = "2.11.0"
 okhttp = "4.12.0"
 hiltNavigationCompose = "1.2.0"
@@ -39,6 +40,7 @@ espresso-core = { group = "androidx.test.espresso", name = "espresso-core", vers
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 play-services-mlkit-document-scanner = { module = "com.google.android.gms:play-services-mlkit-document-scanner", version.ref = "play-services-mlkit-document-scanner" }
 ui = { group = "androidx.compose.ui", name = "ui" }
 ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
