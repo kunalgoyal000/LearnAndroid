@@ -58,12 +58,10 @@
             android:exported="false" />
         <activity
             android:name=".landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity"
-            android:exported="false"
-            android:theme="@style/CameraTheme" />
+            android:exported="false" />
         <activity
             android:name=".camera.ui.CameraActivity"
-            android:exported="false"
-            android:theme="@style/CameraTheme" />
+            android:exported="false" />
         <activity
             android:name=".recyclerView.lazyGrid.ui.LazyGridActivity"
             android:exported="false" />
@@ -83,6 +81,7 @@
         </activity>
         <activity
             android:name=".biometric.BiometricActivity"
+            android:theme="@style/Theme.Biometric"
             android:exported="false" />
         <activity
             android:name=".documentScanner.DocumentScannerActivity"

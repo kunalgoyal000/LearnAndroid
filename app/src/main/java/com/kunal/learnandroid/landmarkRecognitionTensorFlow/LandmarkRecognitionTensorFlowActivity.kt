@@ -19,7 +19,10 @@ class LandmarkRecognitionTensorFlowActivity : ComponentActivity() {
         val landmarkViewModel: LandmarkViewModel by viewModels()
 
         if (!hasCameraPermission()) {
-            ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.CAMERA), 0
+            )
         }
 
         setContent {
