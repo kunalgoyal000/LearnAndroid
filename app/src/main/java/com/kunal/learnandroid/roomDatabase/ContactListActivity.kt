@@ -18,7 +18,7 @@ class ContactListActivity : ComponentActivity() {
             applicationContext,
             ContactDatabase::class.java,
             "contacts.db"
-        ).build()
+        ).addMigrations(ContactDatabase.migration3To4).build()
     }
 
     private val viewModel by viewModels<ContactViewModel>(
