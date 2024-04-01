@@ -19,3 +19,12 @@
 * Animated Counter text
 * Auto Resized Text
 * Custom Shimmer Effect
+* Nested Scrolling in Lazy Column
+* Lazy Vertical Grid with scroll to position
+* CameraX - Photo, Video & Gallery viewing support
+* Asia's Landmark Recognition using Tensor Flow Lite
+* Google Sign-In support using Firebase Auth
+* Background Location tracking
+* Alarm Manager
+* Audio Recording & Playing
+* Room Database with contact adding, deleting, saving & sorting support
