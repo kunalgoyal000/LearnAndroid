@@ -28,3 +28,4 @@
 * Alarm Manager
 * Audio Recording & Playing
 * Room Database with contact adding, deleting, saving & sorting support
+* Room Database Automatic & Manual Migrations
