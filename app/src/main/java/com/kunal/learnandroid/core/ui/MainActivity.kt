@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.kunal.learnandroid.alarmManager.AlarmManagerActivity
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
 import com.kunal.learnandroid.backgroundLocationTracking.BackgroundLocationTrackingActivity
 import com.kunal.learnandroid.biometric.BiometricActivity
@@ -256,6 +257,18 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Background Location tracking")
+                        }
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            Button(onClick = {
+                                startActivity(
+                                    Intent(
+                                        this@MainActivity,
+                                        AlarmManagerActivity::class.java
+                                    )
+                                )
+                            }) {
+                                Text(text = "Alarm Manager")
+                            }
                         }
                     }
                 }
