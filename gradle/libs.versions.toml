@@ -30,6 +30,7 @@ tensorflowLiteGpuDelegatePlugin = "0.4.4"
 tensorflowLiteTaskVision = "0.4.4"
 firebase-bom = "32.8.0"
 googleServices = "4.4.1"
+room = "2.6.1"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -77,6 +78,8 @@ tensorflow-lite-task-vision = { module = "org.tensorflow:tensorflow-lite-task-vi
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
 google-services = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 
 [bundles]
 cameraXDependencies = ["androidx-camera-camera2", "androidx-camera-lifecycle", "androidx-camera-video", "androidx-camera-view", "androidx-camera-mlkit-vision", "androidx-camera-extensions"]

@@ -115,4 +115,8 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
     implementation(libs.play.services.auth)
+
+    //ROOM DB
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
 }

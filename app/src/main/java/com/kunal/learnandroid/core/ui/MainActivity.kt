@@ -37,6 +37,7 @@ import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionT
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.recyclerView.RecyclerViewActivity
+import com.kunal.learnandroid.roomDatabase.ContactListActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
 import com.kunal.learnandroid.text.TextActivity
 
@@ -240,6 +241,16 @@ class MainActivity : AppCompatActivity() {
                             )
                         }) {
                             Text(text = "Audio Recording")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    ContactListActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Room Database")
                         }
                     }
                 }
