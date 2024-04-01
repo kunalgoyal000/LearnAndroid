@@ -15,9 +15,9 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.text.animatedText.ui.AnimatedCounterTextActivity
 import com.kunal.learnandroid.text.autoResizedText.ui.AutoResizedTextActivity
-import com.kunal.learnandroid.text.ui.theme.LearnAndroidTheme
 
 class TextActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

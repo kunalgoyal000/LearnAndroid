@@ -9,7 +9,7 @@ import androidx.compose.runtime.getValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
-import com.kunal.learnandroid.roomDatabase.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 
 class ContactListActivity : ComponentActivity() {
 

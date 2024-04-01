@@ -24,7 +24,7 @@ import com.kunal.learnandroid.authentication.google.presentation.profile.Profile
 import com.kunal.learnandroid.authentication.google.presentation.sign_in.GoogleAuthUiClient
 import com.kunal.learnandroid.authentication.google.presentation.sign_in.GoogleSignInViewModel
 import com.kunal.learnandroid.authentication.google.presentation.sign_in.SignInScreen
-import com.kunal.learnandroid.authentication.google.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import kotlinx.coroutines.launch
 
 class GoogleSignInActivity : ComponentActivity() {

@@ -15,7 +15,7 @@ class MainApplication : Application() {
         super.onCreate()
 
         //Disable dark mode
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         createNotificationChannel()
     }
 

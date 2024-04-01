@@ -15,10 +15,10 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.recyclerView.lazyGrid.ui.LazyGridActivity
 import com.kunal.learnandroid.recyclerView.nestedScrolling.ui.NestedScrollingActivity
 import com.kunal.learnandroid.recyclerView.pullToRefresh.ui.PullToRefreshActivity
-import com.kunal.learnandroid.recyclerView.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.shimmer.ui.ShimmerActivity
 
 class RecyclerViewActivity : ComponentActivity() {
