@@ -10,7 +10,7 @@ data class Contact(
     val lastName: String,
     val phoneNumber: String,
     @ColumnInfo(name = "address", defaultValue = "")
-    val address: String = "",
+    val addressNew: String = "",
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 )

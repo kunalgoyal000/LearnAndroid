@@ -2,16 +2,24 @@ package com.kunal.learnandroid.roomDatabase
 
 import androidx.room.AutoMigration
 import androidx.room.Database
+import androidx.room.RenameColumn
 import androidx.room.RoomDatabase
+import androidx.room.migration.AutoMigrationSpec
 
 @Database(
     entities = [Contact::class],
-    version = 2,
+    version = 3,
     autoMigrations = [
-        AutoMigration(from = 1, to = 2)
+        AutoMigration(from = 1, to = 2),
+        AutoMigration(from = 2, to = 3, spec = ContactDatabase.Migration2To3::class)
     ]
 )
 abstract class ContactDatabase : RoomDatabase() {
 
     abstract val dao: ContactDao
+
+    @RenameColumn(tableName = "Contact", fromColumnName = "address", toColumnName = "addressNew")
+    class Migration2To3 : AutoMigrationSpec
+
+
 }
