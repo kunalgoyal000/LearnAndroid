@@ -33,6 +33,12 @@
         android:theme="@style/Theme.LearnAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".hardware.bluetooth.BluetoothActivity"
+            android:exported="false" />
+        <activity
+            android:name=".paging.PagingActivity"
+            android:exported="false" />
+        <activity
             android:name=".supportAllScreenSizes.SupportAllScreenSizesActivity"
             android:exported="false" />
         <activity
@@ -69,7 +75,7 @@
             android:name=".recyclerView.lazyGrid.ui.LazyGridActivity"
             android:exported="false" />
         <activity
-            android:name=".core.ui.MainActivity"
+            android:name=".core.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>

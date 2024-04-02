@@ -106,6 +106,7 @@ dependencies {
     //NETWORKING LIBRARY
     implementation(libs.retrofit)
     implementation(libs.gson)
+    implementation(libs.moshi)
     implementation(platform(libs.okhttp.bom))
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
@@ -133,4 +134,9 @@ dependencies {
     //ROOM DB TESTING
     androidTestImplementation(libs.androidx.room.testing)
     androidTestImplementation(libs.truth)
+
+    //PAGING
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.androidx.paging.compose)
+    implementation(libs.androidx.room.paging)
 }

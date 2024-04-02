@@ -7,7 +7,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.kunal.learnandroid.R
-import com.kunal.learnandroid.core.ui.MainActivity
+import com.kunal.learnandroid.core.MainActivity
 
 class CounterNotificationService(
     private val context: Context

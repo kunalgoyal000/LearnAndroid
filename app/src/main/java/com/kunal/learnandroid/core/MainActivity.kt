@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.core.ui
+package com.kunal.learnandroid.core
 
 import android.animation.ObjectAnimator
 import android.content.Intent
@@ -35,6 +35,7 @@ import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.internet.InternetConnectivityActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
+import com.kunal.learnandroid.paging.PagingActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.recyclerView.RecyclerViewActivity
 import com.kunal.learnandroid.roomDatabase.ContactListActivity
@@ -262,6 +263,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "All Screen Sizes")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    PagingActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Paging & Caching")
                         }
                     }
                 }

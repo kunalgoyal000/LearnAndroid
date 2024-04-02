@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.daggerHilt.di
+package com.kunal.learnandroid.core.di
 
 import com.kunal.learnandroid.daggerHilt.domain.repository.CatRepository
 import com.kunal.learnandroid.daggerHilt.domain.repository.CatRepositoryImpl
