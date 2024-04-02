@@ -30,6 +30,4 @@ abstract class ContactDatabase : RoomDatabase() {
             }
         }
     }
-
-
 }

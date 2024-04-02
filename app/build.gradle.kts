@@ -22,6 +22,15 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        ksp {
+            arg("room.schemaLocation", "$projectDir/schemas")
+        }
+    }
+
+    sourceSets {
+        // Adds exported schema location as test app assets.
+        getByName("androidTest").assets.srcDir("$projectDir/schemas")
     }
 
     buildTypes {
@@ -50,10 +59,6 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
-    }
-
-    ksp {
-        arg("room.schemaLocation", "$projectDir/schemas")
     }
 }
 
@@ -121,6 +126,11 @@ dependencies {
     implementation(libs.play.services.auth)
 
     //ROOM DB
+//    implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
+
+    //ROOM DB TESTING
+    androidTestImplementation(libs.androidx.room.testing)
+    androidTestImplementation(libs.truth)
 }
