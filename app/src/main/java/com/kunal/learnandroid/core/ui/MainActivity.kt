@@ -39,6 +39,7 @@ import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.recyclerView.RecyclerViewActivity
 import com.kunal.learnandroid.roomDatabase.ContactListActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
+import com.kunal.learnandroid.supportAllScreenSizes.SupportAllScreenSizesActivity
 import com.kunal.learnandroid.text.TextActivity
 
 class MainActivity : ComponentActivity() {
@@ -251,6 +252,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Room Database")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    SupportAllScreenSizesActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "All Screen Sizes")
                         }
                     }
                 }
