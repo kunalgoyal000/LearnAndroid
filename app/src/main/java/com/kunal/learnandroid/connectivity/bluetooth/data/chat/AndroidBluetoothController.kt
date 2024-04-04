@@ -52,7 +52,7 @@ class AndroidBluetoothController(
 
     @SuppressLint("MissingPermission")
     override fun startDiscovery() {
-        if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) && !hasPermission(Manifest.permission.BLUETOOTH_SCAN)) {
+        if (!deviceIsAboveApi30AndHasPermission(Manifest.permission.BLUETOOTH_SCAN)) {
             return
         }
 
@@ -68,7 +68,7 @@ class AndroidBluetoothController(
 
     @SuppressLint("MissingPermission")
     override fun stopDiscovery() {
-        if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) && !hasPermission(Manifest.permission.BLUETOOTH_SCAN)) {
+        if (!deviceIsAboveApi30AndHasPermission(Manifest.permission.BLUETOOTH_SCAN)) {
             return
         }
 
@@ -81,7 +81,7 @@ class AndroidBluetoothController(
 
     @SuppressLint("MissingPermission")
     private fun updatePairedDevices() {
-        if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) && !hasPermission(Manifest.permission.BLUETOOTH_CONNECT)) {
+        if (!deviceIsAboveApi30AndHasPermission(Manifest.permission.BLUETOOTH_CONNECT)) {
             return
         }
 
@@ -93,7 +93,9 @@ class AndroidBluetoothController(
             }
     }
 
-    private fun hasPermission(permission: String): Boolean {
-        return context.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED
+    //these permissions are required only for android 12 and above devices
+    private fun deviceIsAboveApi30AndHasPermission(permission: String): Boolean {
+        return (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S)
+                && context.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED
     }
 }
