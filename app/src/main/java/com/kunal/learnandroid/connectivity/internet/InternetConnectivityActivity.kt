@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.internet
+package com.kunal.learnandroid.connectivity.internet
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

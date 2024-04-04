@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.internet
+package com.kunal.learnandroid.connectivity.internet
 
 import android.content.Context
 import android.net.ConnectivityManager

@@ -5,6 +5,8 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.room.Room
+import com.kunal.learnandroid.connectivity.bluetooth.data.chat.AndroidBluetoothController
+import com.kunal.learnandroid.connectivity.bluetooth.domain.chat.BluetoothController
 import com.kunal.learnandroid.daggerHilt.AppConstants
 import com.kunal.learnandroid.daggerHilt.data.remote.ApiService
 import com.kunal.learnandroid.paging.data.local.BeerDatabase
@@ -90,5 +92,11 @@ object AppModule {
                 beerDatabase.dao.pagingSource()
             }
         )
+    }
+
+    @Provides
+    @Singleton
+    fun provideBluetoothController(@ApplicationContext context: Context): BluetoothController {
+        return AndroidBluetoothController(context)
     }
 }

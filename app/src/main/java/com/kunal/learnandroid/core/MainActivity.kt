@@ -28,11 +28,11 @@ import com.kunal.learnandroid.audioRecording.AudioRecordingActivity
 import com.kunal.learnandroid.authentication.AuthenticationActivity
 import com.kunal.learnandroid.backgroundLocationTracking.BackgroundLocationTrackingActivity
 import com.kunal.learnandroid.camera.ui.CameraActivity
+import com.kunal.learnandroid.connectivity.ConnectivityActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
-import com.kunal.learnandroid.internet.InternetConnectivityActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.paging.PagingActivity
@@ -124,6 +124,16 @@ class MainActivity : ComponentActivity() {
                             startActivity(
                                 Intent(
                                     this@MainActivity,
+                                    ConnectivityActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Connectivity")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
                                     DocumentScannerActivity::class.java
                                 )
                             )
@@ -169,18 +179,6 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Dagger-Hilt, Retrofit, Coil")
-                        }
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                            Button(onClick = {
-                                startActivity(
-                                    Intent(
-                                        this@MainActivity,
-                                        InternetConnectivityActivity::class.java
-                                    )
-                                )
-                            }) {
-                                Text(text = "Internet connectivity")
-                            }
                         }
                         Button(onClick = {
                             startActivity(
