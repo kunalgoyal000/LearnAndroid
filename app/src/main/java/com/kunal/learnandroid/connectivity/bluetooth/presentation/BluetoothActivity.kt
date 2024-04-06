@@ -11,10 +11,18 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.kunal.learnandroid.connectivity.bluetooth.presentation.components.DeviceScreen
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
@@ -105,14 +113,51 @@ class BluetoothActivity : ComponentActivity() {
                 val viewModel = hiltViewModel<BluetoothViewModel>()
                 val state by viewModel.state.collectAsState()
 
+                LaunchedEffect(key1 = state.errorMessage) {
+                    state.errorMessage?.let { error ->
+                        Toast.makeText(
+                            applicationContext,
+                            error,
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+
+                LaunchedEffect(key1 = state.isConnected) {
+                    if (state.isConnected) {
+                        Toast.makeText(
+                            applicationContext,
+                            "You're connected!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+
                 Surface(
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    DeviceScreen(
-                        state = state,
-                        onStartScan = viewModel::startScan,
-                        onStopScan = viewModel::stopScan
-                    )
+                    when {
+                        state.isConnecting -> {
+                            Column(
+                                modifier = Modifier.fillMaxSize(),
+                                verticalArrangement = Arrangement.Center,
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                CircularProgressIndicator()
+                                Text(text = "Connecting...")
+                            }
+                        }
+
+                        else -> {
+                            DeviceScreen(
+                                state = state,
+                                onStartScan = viewModel::startScan,
+                                onStopScan = viewModel::stopScan,
+                                onDeviceClick = viewModel::connectToDevice,
+                                onStartServer = viewModel::waitForIncomingConnections
+                            )
+                        }
+                    }
                 }
             }
         }
