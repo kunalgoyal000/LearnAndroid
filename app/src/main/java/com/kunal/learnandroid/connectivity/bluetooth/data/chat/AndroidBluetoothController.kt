@@ -243,8 +243,12 @@ class AndroidBluetoothController(
     }
 
     override fun release() {
-        context.unregisterReceiver(foundDeviceReceiver)
-        context.unregisterReceiver(bluetoothStateReceiver)
+        try {
+            context.unregisterReceiver(foundDeviceReceiver)
+            context.unregisterReceiver(bluetoothStateReceiver)
+        } catch (e: IllegalArgumentException) {
+            e.printStackTrace()
+        }
         closeConnection()
     }
 
