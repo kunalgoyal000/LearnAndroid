@@ -269,7 +269,7 @@ class AndroidBluetoothController(
     //these permissions are required only for android 12 and above devices
     private fun deviceIsAboveApi30AndHasPermission(permission: String): Boolean {
         return (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S)
-                && context.checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED
+                && context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED
     }
 
     companion object {
