@@ -314,14 +314,10 @@ class MainActivity : ComponentActivity() {
                                 )
                             )
                         }) {
-                            Text(text = "Video Player")
+                            Text(text = "Video Player with Picture in Picture")
                         }
                     }
                 }
             }
         }
-
-    override fun onUserLeaveHint() {
-        super.onUserLeaveHint()
-    }
     }

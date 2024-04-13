@@ -161,7 +161,11 @@
         <activity android:name=".fcm.FCMPushNotificationsActivity" />
         <activity android:name=".recyclerView.swipeToDelete.SwipeToDeleteActivity" />
         <activity android:name=".media.image.PhotoPickerActivity" />
-        <activity android:name=".media.video.exoplayer.VideoPlayerActivity" />
+        <activity
+            android:name=".media.video.exoplayer.VideoPlayerActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:exported="true"
+            android:supportsPictureInPicture="true" />
         <service
             android:name=".fcm.PushNotificationService"
             android:exported="false">
@@ -181,6 +185,8 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/counter_widget_info" />
         </receiver>
+
+        <receiver android:name=".media.video.exoplayer.VideoPlayerActivity$MyReceiver" />
     </application>
 
 </manifest>
