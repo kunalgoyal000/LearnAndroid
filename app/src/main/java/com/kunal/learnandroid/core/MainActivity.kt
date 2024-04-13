@@ -33,6 +33,7 @@ import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
+import com.kunal.learnandroid.fcm.FCMPushNotificationsActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.paging.PagingActivity
@@ -271,6 +272,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Paging & Caching")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    FCMPushNotificationsActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "FCM Push Notifications")
                         }
                     }
                 }
