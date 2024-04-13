@@ -29,3 +29,6 @@
 * Audio Recording & Playing
 * Room Database with contact adding, deleting, saving & sorting support
 * Room Database Automatic & Manual Migrations
+* Different screen sizes support using height and weight
+* Paging & Caching using Paging 3 library
+* Bluetooth Scanning, Pairing, Connecting and chatting (still a lot to be refactored)
