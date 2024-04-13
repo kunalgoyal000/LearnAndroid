@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.audioRecording
+package com.kunal.learnandroid.media.audio.audioRecording
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,9 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.core.app.ActivityCompat
-import com.kunal.learnandroid.audioRecording.playback.AndroidAudioPlayer
-import com.kunal.learnandroid.audioRecording.record.AndroidAudioRecorder
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
+import com.kunal.learnandroid.media.audio.audioRecording.playback.AndroidAudioPlayer
+import com.kunal.learnandroid.media.audio.audioRecording.record.AndroidAudioRecorder
 import java.io.File
 
 class AudioRecordingActivity : ComponentActivity() {

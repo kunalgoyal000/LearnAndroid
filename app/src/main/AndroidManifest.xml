@@ -77,7 +77,7 @@
             android:name=".recyclerView.RecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".audioRecording.AudioRecordingActivity"
+            android:name=".media.audio.audioRecording.AudioRecordingActivity"
             android:exported="false" />
         <activity
             android:name=".alarmManager.AlarmManagerActivity"
@@ -113,7 +113,7 @@
             android:exported="false"
             android:theme="@style/Theme.Biometric" />
         <activity
-            android:name=".documentScanner.DocumentScannerActivity"
+            android:name=".media.documentScanner.DocumentScannerActivity"
             android:exported="false" />
         <activity
             android:name=".appShortcut.AppShortcutActivity"
@@ -160,6 +160,7 @@
 
         <activity android:name=".fcm.FCMPushNotificationsActivity" />
         <activity android:name=".recyclerView.swipeToDelete.SwipeToDeleteActivity" />
+        <activity android:name=".media.image.PhotoPickerActivity" />
 
         <service
             android:name=".fcm.PushNotificationService"

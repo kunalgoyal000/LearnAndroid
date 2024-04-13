@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.audioRecording.playback
+package com.kunal.learnandroid.media.audio.audioRecording.playback
 
 import android.content.Context
 import android.media.MediaPlayer

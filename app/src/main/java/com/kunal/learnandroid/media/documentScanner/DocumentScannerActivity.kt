@@ -1,4 +1,4 @@
-package com.kunal.learnandroid.documentScanner
+package com.kunal.learnandroid.media.documentScanner
 
 import android.net.Uri
 import android.os.Bundle

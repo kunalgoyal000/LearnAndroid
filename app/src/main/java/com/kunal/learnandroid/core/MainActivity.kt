@@ -24,7 +24,6 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kunal.learnandroid.alarmManager.AlarmManagerActivity
 import com.kunal.learnandroid.appShortcut.AppShortcutActivity
-import com.kunal.learnandroid.audioRecording.AudioRecordingActivity
 import com.kunal.learnandroid.authentication.AuthenticationActivity
 import com.kunal.learnandroid.backgroundLocationTracking.BackgroundLocationTrackingActivity
 import com.kunal.learnandroid.camera.ui.CameraActivity
@@ -32,10 +31,12 @@ import com.kunal.learnandroid.connectivity.ConnectivityActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
-import com.kunal.learnandroid.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.fcm.FCMPushNotificationsActivity
 import com.kunal.learnandroid.imageSlider.ImageSliderActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
+import com.kunal.learnandroid.media.audio.audioRecording.AudioRecordingActivity
+import com.kunal.learnandroid.media.documentScanner.DocumentScannerActivity
+import com.kunal.learnandroid.media.image.PhotoPickerActivity
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.paging.PagingActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
@@ -293,6 +294,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Image Slider")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    PhotoPickerActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Photo Picker")
                         }
                     }
                 }
