@@ -3,6 +3,7 @@ agp = "8.3.1"
 appcompat = "1.6.1"
 coil = "2.6.0"
 core-splashscreen = "1.0.1"
+glance = "1.1.0-beta01"
 kotlin = "1.9.22"
 hilt = "2.51"
 ksp = "1.9.22-1.0.17"
@@ -38,6 +39,8 @@ pagingRuntime = "3.2.1"
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen" }
+androidx-glance = { module = "androidx.glance:glance", version.ref = "glance" }
+androidx-glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "glance" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "pagingCompose" }
 androidx-paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "pagingRuntime" }
@@ -84,6 +87,10 @@ tensorflow-lite-gpu-delegate-plugin = { module = "org.tensorflow:tensorflow-lite
 tensorflow-lite-task-vision = { module = "org.tensorflow:tensorflow-lite-task-vision", version.ref = "tensorflowLiteTaskVision" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
+firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-analytics" }
 google-services = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }
 #room-runtime={ group ="androidx.room", name="room-runtime", version.ref="room"}
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }

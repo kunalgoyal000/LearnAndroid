@@ -119,13 +119,17 @@ dependencies {
     //TENSOR FLOW LITE
     implementation(libs.bundles.tensorFlowLiteDependencies)
 
-    //LOCATION
+    //PLAY SERVICES
+    implementation(libs.play.services.auth)
     implementation(libs.play.services.location)
 
-    //AUTHENTICATION APIs
+    //FIREBASE
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
-    implementation(libs.play.services.auth)
+    implementation(libs.firebase.messaging)
+    implementation(libs.firebase.messaging.ktx)
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
 
     //ROOM DB
 //    implementation(libs.room.runtime)
@@ -141,10 +145,8 @@ dependencies {
     implementation(libs.androidx.paging.compose)
     implementation(libs.androidx.room.paging)
 
-    //FIREBASE
-    implementation("com.google.firebase:firebase-messaging")
-    implementation("com.google.firebase:firebase-messaging-ktx")
-    implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-crashlytics")
+    //GLANCE FOR WIDGETS
+    implementation(libs.androidx.glance)
+    implementation(libs.androidx.glance.appwidget)
 
 }
