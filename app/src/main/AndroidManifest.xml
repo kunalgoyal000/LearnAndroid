@@ -161,7 +161,7 @@
         <activity android:name=".fcm.FCMPushNotificationsActivity" />
         <activity android:name=".recyclerView.swipeToDelete.SwipeToDeleteActivity" />
         <activity android:name=".media.image.PhotoPickerActivity" />
-
+        <activity android:name=".media.video.exoplayer.VideoPlayerActivity" />
         <service
             android:name=".fcm.PushNotificationService"
             android:exported="false">

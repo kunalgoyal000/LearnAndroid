@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.ksp)
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -148,5 +149,10 @@ dependencies {
     //GLANCE FOR WIDGETS
     implementation(libs.androidx.glance)
     implementation(libs.androidx.glance.appwidget)
+
+    //EXOPLAYER
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.media3.exoplayer.dash)
+    implementation(libs.androidx.media3.ui)
 
 }

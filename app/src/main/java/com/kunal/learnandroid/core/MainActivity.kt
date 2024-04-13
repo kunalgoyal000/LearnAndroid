@@ -37,6 +37,7 @@ import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionT
 import com.kunal.learnandroid.media.audio.audioRecording.AudioRecordingActivity
 import com.kunal.learnandroid.media.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.media.image.PhotoPickerActivity
+import com.kunal.learnandroid.media.video.exoplayer.VideoPlayerActivity
 import com.kunal.learnandroid.notifications.ui.NotificationActivity
 import com.kunal.learnandroid.paging.PagingActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
@@ -305,8 +306,22 @@ class MainActivity : ComponentActivity() {
                         }) {
                             Text(text = "Photo Picker")
                         }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    VideoPlayerActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Video Player")
+                        }
                     }
                 }
             }
         }
+
+    override fun onUserLeaveHint() {
+        super.onUserLeaveHint()
+    }
     }
