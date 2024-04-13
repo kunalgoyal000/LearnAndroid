@@ -20,8 +20,9 @@ class ChatViewModel : ViewModel() {
     var state by mutableStateOf(ChatState())
         private set
 
+    //Change the base url to your computer's Api Address to connect to local host
     private val api: FcmApi = Retrofit.Builder()
-        .baseUrl("http://10.0.2.2:8080")
+        .baseUrl("http://192.168.29.111:8080")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create()
