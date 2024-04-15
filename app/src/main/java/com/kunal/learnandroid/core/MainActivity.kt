@@ -43,6 +43,7 @@ import com.kunal.learnandroid.paging.PagingActivity
 import com.kunal.learnandroid.permissions.PermissionsActivity
 import com.kunal.learnandroid.recyclerView.RecyclerViewActivity
 import com.kunal.learnandroid.roomDatabase.ContactListActivity
+import com.kunal.learnandroid.search.SearchActivity
 import com.kunal.learnandroid.services.foreground.ForegroundServiceActivity
 import com.kunal.learnandroid.supportAllScreenSizes.SupportAllScreenSizesActivity
 import com.kunal.learnandroid.text.TextActivity
@@ -315,6 +316,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Video Player with Picture in Picture")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    SearchActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Search")
                         }
                     }
                 }
