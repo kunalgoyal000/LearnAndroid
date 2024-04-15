@@ -31,6 +31,7 @@ import com.kunal.learnandroid.connectivity.ConnectivityActivity
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
+import com.kunal.learnandroid.dropdownMenus.DropdownMenuActivity
 import com.kunal.learnandroid.fcm.FCMPushNotificationsActivity
 import com.kunal.learnandroid.imageSlider.ImageSliderActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
@@ -326,6 +327,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Search")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    DropdownMenuActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Dropdown Menu")
                         }
                     }
                 }
