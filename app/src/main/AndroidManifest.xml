@@ -47,6 +47,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".material3.Material3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".material3.buttons.ButtonActivity"
+            android:exported="false" />
+        <activity
             android:name=".dropdownMenus.DropdownMenuActivity"
             android:exported="false" />
         <activity

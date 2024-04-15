@@ -35,6 +35,7 @@ import com.kunal.learnandroid.dropdownMenus.DropdownMenuActivity
 import com.kunal.learnandroid.fcm.FCMPushNotificationsActivity
 import com.kunal.learnandroid.imageSlider.ImageSliderActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
+import com.kunal.learnandroid.material3.Material3Activity
 import com.kunal.learnandroid.media.audio.audioRecording.AudioRecordingActivity
 import com.kunal.learnandroid.media.documentScanner.DocumentScannerActivity
 import com.kunal.learnandroid.media.image.PhotoPickerActivity
@@ -337,6 +338,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Dropdown Menu")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    Material3Activity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Material3")
                         }
                     }
                 }
