@@ -4,7 +4,7 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
-import androidx.compose.animation.with
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -15,7 +15,6 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 
 @OptIn(ExperimentalAnimationApi::class)
@@ -32,7 +31,7 @@ fun AnimatedCounter(
         oldCount = count
     }
 
-    Row(modifier = Modifier) {
+    Row(modifier = modifier) {
         val countString = count.toString()
         val oldCountString = oldCount.toString()
         for (i in countString.indices) {
@@ -47,12 +46,11 @@ fun AnimatedCounter(
             AnimatedContent(
                 targetState = char,
                 transitionSpec = {
-                    slideInVertically { it } with slideOutVertically { -it }
+                    slideInVertically { it } togetherWith slideOutVertically { -it }
                 }, label = ""
             ) {
                 Text(
                     text = it.toString(),
-                    color = Color.White,
                     style = style,
                     softWrap = false
                 )

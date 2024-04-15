@@ -5,7 +5,6 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
-import androidx.appcompat.app.AppCompatDelegate
 import com.kunal.learnandroid.notifications.CounterNotificationService
 import dagger.hilt.android.HiltAndroidApp
 
@@ -15,7 +14,7 @@ class MainApplication : Application() {
         super.onCreate()
 
         //Disable dark mode
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         createNotificationChannel()
     }
 

@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.material3.buttons.ButtonActivity
+import com.kunal.learnandroid.material3.textFields.TextFieldActivity
 
 class Material3Activity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +41,16 @@ class Material3Activity : ComponentActivity() {
                         )
                     }) {
                         Text(text = "Buttons")
+                    }
+                    Button(onClick = {
+                        startActivity(
+                            Intent(
+                                this@Material3Activity,
+                                TextFieldActivity::class.java
+                            )
+                        )
+                    }) {
+                        Text(text = "TextFields")
                     }
                 }
             }

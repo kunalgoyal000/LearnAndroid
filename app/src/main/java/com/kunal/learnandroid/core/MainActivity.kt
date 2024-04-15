@@ -8,6 +8,7 @@ import android.view.View
 import android.view.animation.OvershootInterpolator
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,6 +17,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -54,6 +57,7 @@ class MainActivity : ComponentActivity() {
 
     private val viewModel by viewModels<MainViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
         installSplashScreen().apply {
@@ -89,6 +93,10 @@ class MainActivity : ComponentActivity() {
         }
         setContent {
             LearnAndroidTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
@@ -354,3 +362,4 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
