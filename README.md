@@ -32,3 +32,12 @@
 * Different screen sizes support using height and weight
 * Paging & Caching using Paging 3 library
 * Bluetooth Scanning, Pairing, Connecting and chatting (still a lot to be refactored)
+* FCM token support for notifications
+* Widgets support using Glance API
+* Image slider using horizontal pager
+* Single and multiple Image picker support using visual media picker
+* Exoplayer support using media 3
+* Picture in Picture mode for video
+* Basic search support in compose
+* Context dropdown menu support
+* Material3 Buttons support
