@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.material3.bottomAppBar.BottomAppBarActivity
+import com.kunal.learnandroid.material3.bottomNavBar.BottomNavigationBarActivity
 import com.kunal.learnandroid.material3.buttons.ButtonActivity
 import com.kunal.learnandroid.material3.selectionComponents.SelectionComponentsActivity
 import com.kunal.learnandroid.material3.textFields.TextFieldActivity
@@ -84,6 +85,16 @@ class Material3Activity : ComponentActivity() {
                         )
                     }) {
                         Text(text = "Bottom App Bar")
+                    }
+                    Button(onClick = {
+                        startActivity(
+                            Intent(
+                                this@Material3Activity,
+                                BottomNavigationBarActivity::class.java
+                            )
+                        )
+                    }) {
+                        Text(text = "Bottom Navigation Bar")
                     }
                 }
             }
