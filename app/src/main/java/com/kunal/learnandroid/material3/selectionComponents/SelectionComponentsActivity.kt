@@ -1,5 +1,7 @@
 package com.kunal.learnandroid.material3.selectionComponents
 
+import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -15,6 +17,7 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Icon
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TriStateCheckbox
@@ -43,6 +46,10 @@ class SelectionComponentsActivity : ComponentActivity() {
                     Checkboxes()
                     Spacer(modifier = Modifier.height(32.dp))
                     MySwitch()
+                    Spacer(modifier = Modifier.height(32.dp))
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        RadioButtons()
+                    }
                 }
             }
         }
@@ -164,5 +171,53 @@ private fun MySwitch() {
                 )
             }
         )
+    }
+}
+
+@SuppressLint("NewApi")
+@Composable
+private fun RadioButtons() {
+    val radioButtons = remember {
+        mutableStateListOf(
+            ToggleableInfo(
+                isChecked = true,
+                text = "Photos"
+            ),
+            ToggleableInfo(
+                isChecked = false,
+                text = "Videos"
+            ),
+            ToggleableInfo(
+                isChecked = false,
+                text = "Audio"
+            )
+        )
+    }
+
+    radioButtons.forEach { info ->
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .clickable {
+                    radioButtons.replaceAll {
+                        it.copy(
+                            isChecked = it.text == info.text
+                        )
+                    }
+                }
+                .padding(end = 16.dp)
+        ) {
+            RadioButton(
+                selected = info.isChecked,
+                onClick = {
+                    radioButtons.replaceAll {
+                        it.copy(
+                            isChecked = it.text == info.text
+                        )
+                    }
+                }
+            )
+            Text(text = info.text)
+        }
     }
 }
