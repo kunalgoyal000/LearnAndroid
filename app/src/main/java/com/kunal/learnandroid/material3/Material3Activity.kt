@@ -19,6 +19,7 @@ import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.material3.buttons.ButtonActivity
 import com.kunal.learnandroid.material3.selectionComponents.SelectionComponentsActivity
 import com.kunal.learnandroid.material3.textFields.TextFieldActivity
+import com.kunal.learnandroid.material3.toolbar.ToolbarActivity
 
 class Material3Activity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,6 +63,16 @@ class Material3Activity : ComponentActivity() {
                         )
                     }) {
                         Text(text = "Selection Components")
+                    }
+                    Button(onClick = {
+                        startActivity(
+                            Intent(
+                                this@Material3Activity,
+                                ToolbarActivity::class.java
+                            )
+                        )
+                    }) {
+                        Text(text = "Top App Bar / Toolbar")
                     }
                 }
             }
