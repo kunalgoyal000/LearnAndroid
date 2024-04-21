@@ -6,9 +6,16 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TriStateCheckbox
 import androidx.compose.runtime.Composable
@@ -31,9 +38,11 @@ class SelectionComponentsActivity : ComponentActivity() {
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding()
+                        .padding(16.dp)
                 ) {
                     Checkboxes()
+                    Spacer(modifier = Modifier.height(32.dp))
+                    MySwitch()
                 }
             }
         }
@@ -118,5 +127,42 @@ private fun Checkboxes() {
             )
             Text(text = info.text)
         }
+    }
+}
+
+@Composable
+private fun MySwitch() {
+    var switch by remember {
+        mutableStateOf(
+            ToggleableInfo(
+                isChecked = false,
+                text = "Dark Mode"
+            )
+        )
+    }
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(text = switch.text)
+        Spacer(modifier = Modifier.weight(1f))
+        Switch(
+            checked = switch.isChecked,
+            onCheckedChange = { isChecked ->
+                switch = switch.copy(
+                    isChecked = isChecked
+                )
+            },
+            thumbContent = {
+                Icon(
+                    imageVector = if (switch.isChecked) {
+                        Icons.Default.Check
+                    } else {
+                        Icons.Default.Close
+                    },
+                    contentDescription = null
+                )
+            }
+        )
     }
 }
