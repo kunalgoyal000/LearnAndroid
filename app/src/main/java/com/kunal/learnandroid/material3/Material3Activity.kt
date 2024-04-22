@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.material3.bottomAppBar.BottomAppBarActivity
 import com.kunal.learnandroid.material3.bottomNavBar.BottomNavigationBarActivity
+import com.kunal.learnandroid.material3.bottomSheet.BottomSheetActivity
 import com.kunal.learnandroid.material3.buttons.ButtonActivity
 import com.kunal.learnandroid.material3.navigationDrawer.NavigationDrawerActivity
 import com.kunal.learnandroid.material3.navigationRail.NavigationRailActivity
@@ -117,6 +118,16 @@ class Material3Activity : ComponentActivity() {
                         )
                     }) {
                         Text(text = "Navigation Drawer")
+                    }
+                    Button(onClick = {
+                        startActivity(
+                            Intent(
+                                this@Material3Activity,
+                                BottomSheetActivity::class.java
+                            )
+                        )
+                    }) {
+                        Text(text = "Bottom Sheets")
                     }
                 }
             }
