@@ -40,4 +40,4 @@
 * Picture in Picture mode for video
 * Basic search support in compose
 * Context dropdown menu support
-* Material3 Buttons support
+* Material3 UI support - Buttons, TextFields, Checkboxes, Switches, Radiobuttons, Top and bottom App bars, Bottom Nav Bars
