@@ -19,6 +19,7 @@ import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.material3.bottomAppBar.BottomAppBarActivity
 import com.kunal.learnandroid.material3.bottomNavBar.BottomNavigationBarActivity
 import com.kunal.learnandroid.material3.buttons.ButtonActivity
+import com.kunal.learnandroid.material3.navigationDrawer.NavigationDrawerActivity
 import com.kunal.learnandroid.material3.navigationRail.NavigationRailActivity
 import com.kunal.learnandroid.material3.selectionComponents.SelectionComponentsActivity
 import com.kunal.learnandroid.material3.textFields.TextFieldActivity
@@ -106,6 +107,16 @@ class Material3Activity : ComponentActivity() {
                         )
                     }) {
                         Text(text = "Navigation Rail")
+                    }
+                    Button(onClick = {
+                        startActivity(
+                            Intent(
+                                this@Material3Activity,
+                                NavigationDrawerActivity::class.java
+                            )
+                        )
+                    }) {
+                        Text(text = "Navigation Drawer")
                     }
                 }
             }
