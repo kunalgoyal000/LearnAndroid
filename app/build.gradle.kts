@@ -155,4 +155,7 @@ dependencies {
     implementation(libs.androidx.media3.exoplayer.dash)
     implementation(libs.androidx.media3.ui)
 
+    //WINDOW SIZE CLASS MATERIAL3
+    implementation(libs.androidx.material3.window.size)
+
 }
