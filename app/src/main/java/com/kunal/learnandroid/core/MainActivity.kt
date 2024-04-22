@@ -355,7 +355,7 @@ class MainActivity : ComponentActivity() {
                                 )
                             )
                         }) {
-                            Text(text = "Material3")
+                            Text(text = "Material3 UI")
                         }
                     }
                 }

@@ -23,6 +23,7 @@ import com.kunal.learnandroid.material3.buttons.ButtonActivity
 import com.kunal.learnandroid.material3.navigationDrawer.NavigationDrawerActivity
 import com.kunal.learnandroid.material3.navigationRail.NavigationRailActivity
 import com.kunal.learnandroid.material3.selectionComponents.SelectionComponentsActivity
+import com.kunal.learnandroid.material3.swipeableTabs.SwipeableTabRowsActivity
 import com.kunal.learnandroid.material3.textFields.TextFieldActivity
 import com.kunal.learnandroid.material3.toolbar.ToolbarActivity
 
@@ -128,6 +129,16 @@ class Material3Activity : ComponentActivity() {
                         )
                     }) {
                         Text(text = "Bottom Sheets")
+                    }
+                    Button(onClick = {
+                        startActivity(
+                            Intent(
+                                this@Material3Activity,
+                                SwipeableTabRowsActivity::class.java
+                            )
+                        )
+                    }) {
+                        Text(text = "Swipeable Tab Rows")
                     }
                 }
             }
