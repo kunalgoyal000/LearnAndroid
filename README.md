@@ -40,4 +40,5 @@
 * Picture in Picture mode for video
 * Basic search support in compose
 * Context dropdown menu support
-* Material3 UI support - Buttons, TextFields, Checkboxes, Switches, Radiobuttons, Top and bottom App bars, Bottom Nav Bars
+* Material3 UI support - Buttons, TextFields, Checkboxes, Switches, Radiobuttons, Top and bottom App bars, Bottom Nav Bars, Navigation Rail or Side Bar for large screens, Navigation Drawer, Bottom Sheets, Swipeable Tab Rows using horizontal pager
+* GraphQL using Apollo Client for countries data
