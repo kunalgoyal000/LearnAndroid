@@ -4,9 +4,10 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.googleServices)
     id("com.google.firebase.crashlytics")
     id("kotlin-parcelize")
+    id("com.apollographql.apollo3").version("3.8.3")
 }
 
 android {
@@ -158,4 +159,13 @@ dependencies {
     //WINDOW SIZE CLASS MATERIAL3
     implementation(libs.androidx.material3.window.size)
 
+    //APOLLO GRAPHQL
+    implementation(libs.apollo.runtime)
+
+}
+
+apollo {
+    service("service") {
+        packageName.set("com.kunal")
+    }
 }

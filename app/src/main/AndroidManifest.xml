@@ -80,6 +80,9 @@
             android:name=".material3.buttons.ButtonActivity"
             android:exported="false" />
         <activity
+            android:name=".graphQL.GraphQLActivity"
+            android:exported="false" />
+        <activity
             android:name=".dropdownMenus.DropdownMenuActivity"
             android:exported="false" />
         <activity

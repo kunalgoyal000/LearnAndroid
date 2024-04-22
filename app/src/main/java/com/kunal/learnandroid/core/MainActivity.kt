@@ -36,6 +36,7 @@ import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.dropdownMenus.DropdownMenuActivity
 import com.kunal.learnandroid.fcm.FCMPushNotificationsActivity
+import com.kunal.learnandroid.graphQL.GraphQLActivity
 import com.kunal.learnandroid.imageSlider.ImageSliderActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
 import com.kunal.learnandroid.material3.Material3Activity
@@ -356,6 +357,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Material3 UI")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    GraphQLActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Graph QL")
                         }
                     }
                 }
