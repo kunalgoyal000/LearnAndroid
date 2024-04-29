@@ -1,8 +1,5 @@
 package com.kunal.learnandroid.jetpackCompose.image
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -26,25 +23,18 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kunal.learnandroid.R
-import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 
-class JetpackImageCardActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            LearnAndroidTheme {
-                val painter = painterResource(id = R.drawable.dog)
-                val title = "A cute dog"
-                val description = "A dog who is very cute"
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.5f)
-                        .padding(16.dp)
-                ) {
-                    ImageCard(painter = painter, title = title, contentDescription = description)
-                }
-            }
-        }
+@Composable
+fun JetpackImageCardScreen() {
+    val painter = painterResource(id = R.drawable.dog)
+    val title = "A cute dog"
+    val description = "A dog who is very cute"
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.5f)
+            .padding(16.dp)
+    ) {
+        ImageCard(painter = painter, title = title, contentDescription = description)
     }
 }
 

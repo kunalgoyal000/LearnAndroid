@@ -162,6 +162,10 @@ dependencies {
     //APOLLO GRAPHQL
     implementation(libs.apollo.runtime)
 
+    //NAVIGATION DESTINATIONS
+    implementation("io.github.raamcosta.compose-destinations:core:1.10.2")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.10.2")
+
 }
 
 apollo {

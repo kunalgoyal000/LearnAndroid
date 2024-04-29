@@ -1,8 +1,5 @@
 package com.kunal.learnandroid.jetpackCompose.state
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -17,35 +14,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
-import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import kotlin.random.Random
 
-class JetpackStateActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            LearnAndroidTheme {
-                val color = remember {
-                    mutableStateOf(Color.Yellow)
-                }
+@Composable
+fun JetpackStateScreen() {
+    val color = remember {
+        mutableStateOf(Color.Yellow)
+    }
 
-                Column(modifier = Modifier.fillMaxSize()) {
-                    ColorBox(
-                        Modifier
-                            .weight(1f)
-                            .fillMaxSize()
-                    ) {
-                        color.value = it
-                    }
-                    Box(
-                        modifier = Modifier
-                            .background(color.value)
-                            .weight(1f)
-                            .fillMaxSize()
-                    )
-                }
-            }
+    Column(modifier = Modifier.fillMaxSize()) {
+        ColorBox(
+            Modifier
+                .weight(1f)
+                .fillMaxSize()
+        ) {
+            color.value = it
         }
+        Box(
+            modifier = Modifier
+                .background(color.value)
+                .weight(1f)
+                .fillMaxSize()
+        )
     }
 }
 
