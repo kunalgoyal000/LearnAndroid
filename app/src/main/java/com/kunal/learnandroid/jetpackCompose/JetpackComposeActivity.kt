@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.kunal.learnandroid.core.ui.theme.LearnAndroidTheme
 import com.kunal.learnandroid.jetpackCompose.image.JetpackImageCardActivity
+import com.kunal.learnandroid.jetpackCompose.state.JetpackStateActivity
 import com.kunal.learnandroid.jetpackCompose.text.JetpackTextActivity
 
 class JetpackComposeActivity : ComponentActivity() {
@@ -51,6 +52,16 @@ class JetpackComposeActivity : ComponentActivity() {
                         )
                     }) {
                         Text(text = "Image Card")
+                    }
+                    Button(onClick = {
+                        startActivity(
+                            Intent(
+                                this@JetpackComposeActivity,
+                                JetpackStateActivity::class.java
+                            )
+                        )
+                    }) {
+                        Text(text = "State")
                     }
                 }
             }

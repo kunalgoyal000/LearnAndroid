@@ -47,6 +47,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".jetpackCompose.state.JetpackStateActivity"
+            android:exported="false" />
+        <activity
             android:name=".jetpackCompose.image.JetpackImageCardActivity"
             android:exported="false" />
         <activity
