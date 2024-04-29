@@ -47,6 +47,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".jetpackCompose.image.JetpackImageCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jetpackCompose.text.JetpackTextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jetpackCompose.JetpackComposeActivity"
+            android:exported="false" />
+        <activity
             android:name=".recyclerView.categoriesList.CategoriesListActivity"
             android:exported="false" />
         <activity

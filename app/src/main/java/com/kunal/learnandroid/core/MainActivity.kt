@@ -38,6 +38,7 @@ import com.kunal.learnandroid.dropdownMenus.DropdownMenuActivity
 import com.kunal.learnandroid.fcm.FCMPushNotificationsActivity
 import com.kunal.learnandroid.graphQL.GraphQLActivity
 import com.kunal.learnandroid.imageSlider.ImageSliderActivity
+import com.kunal.learnandroid.jetpackCompose.JetpackComposeActivity
 import com.kunal.learnandroid.landmarkRecognitionTensorFlow.LandmarkRecognitionTensorFlowActivity
 import com.kunal.learnandroid.material3.Material3Activity
 import com.kunal.learnandroid.media.audio.audioRecording.AudioRecordingActivity
@@ -106,6 +107,16 @@ class MainActivity : ComponentActivity() {
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    JetpackComposeActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Jetpack Compose")
+                        }
                         Button(onClick = {
                             startActivity(
                                 Intent(
