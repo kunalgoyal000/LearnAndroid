@@ -9,4 +9,6 @@
     <string name="title_activity_text">TextActivity</string>
     <string name="web_client_id">60474246691-f71ckk2alti99g70ktkfqg9ff2lqne85.apps.googleusercontent.com</string>
     <string name="title_activity_contact_list">ContactListActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

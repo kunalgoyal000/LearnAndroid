@@ -36,6 +36,7 @@ import com.kunal.learnandroid.core.ui.viewModels.MainViewModel
 import com.kunal.learnandroid.daggerHilt.ui.DaggerHiltActivity
 import com.kunal.learnandroid.dropdownMenus.DropdownMenuActivity
 import com.kunal.learnandroid.fcm.FCMPushNotificationsActivity
+import com.kunal.learnandroid.fragments.SharedDataActivity
 import com.kunal.learnandroid.graphQL.GraphQLActivity
 import com.kunal.learnandroid.imageSlider.ImageSliderActivity
 import com.kunal.learnandroid.jetpackCompose.JetpackComposeActivity
@@ -378,6 +379,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }) {
                             Text(text = "Graph QL")
+                        }
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    SharedDataActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text(text = "Shared View Model")
                         }
                     }
                 }
