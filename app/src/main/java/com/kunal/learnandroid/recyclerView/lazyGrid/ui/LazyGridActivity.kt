@@ -42,7 +42,6 @@ class LazyGridActivity : ComponentActivity() {
                             ) {
                                 Text(text = "Item $i")
                             }
-
                         }
                     })
             }
